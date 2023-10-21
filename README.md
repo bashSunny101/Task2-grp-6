@@ -6,9 +6,11 @@ Welcome to the Movie Recommendation Website repository! This is a web applicatio
 
 ## Features of this Website
   - User account creation and management
-    - Personalized movie recommendation
-      - Search for movies by title, genre, or actors
-        - Bookmarking favorite movies
-          - Watch movie trailers
-            - Responsive and user-friendly design
-              
+  - Personalized movie recommendation
+  - Search for movies by title, genre, or actors
+  - Bookmarking favorite movies
+  - Watch movie trailers
+  - Responsive and user-friendly design
+
+ # About movie recommendation
+ - Movies will be recommended to users on the basis of of there previously watched movies types .
