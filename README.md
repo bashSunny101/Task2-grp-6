@@ -1,8 +1,14 @@
-# React + Vite
+# Task2-grp-6
+Movie Recommendation Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introduction
+Welcome to the Movie Recommendation Website repository! This is a web application that provides movie recommendations to users based on their preferences. It's a user-friendly platform for movie enthusiasts to discover new films they might enjoy.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features of this Website
+  - User account creation and management
+    - Personalized movie recommendation
+      - Search for movies by title, genre, or actors
+        - Bookmarking favorite movies
+          - Watch movie trailers
+            - Responsive and user-friendly design
+              
