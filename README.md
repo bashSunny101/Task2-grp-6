@@ -12,5 +12,6 @@ Welcome to the Movie Recommendation Website repository! This is a web applicatio
   - Watch movie trailers
   - Responsive and user-friendly design
 
-# Movies will be recommended to users on the basis of of there previously watched movies types .
+ # About movie recommendation
+ - Movies will be recommended to users on the basis of of there previously watched movies types .
   
