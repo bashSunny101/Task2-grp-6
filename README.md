@@ -14,4 +14,3 @@ Welcome to the Movie Recommendation Website repository! This is a web applicatio
 
  # About movie recommendation
  - Movies will be recommended to users on the basis of of there previously watched movies types .
-  
