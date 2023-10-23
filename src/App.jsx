@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import NavBar from './components/NavBar';
-// import MovieCard from './components/MovieCard';
+import MovieCard from './components/MovieCard';
 import axios from 'axios';
 
 const App = () => {
@@ -8,18 +8,18 @@ const App = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const apiKey = 'YOUR_TMDB_API_KEY';
-    const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`;
+    const apiKey = 'd59f0303'; 
+    const apiUrl = `http://www.omdbapi.com/?s=movie&type=movie&apikey=${apiKey}`;
 
     axios
       .get(apiUrl)
       .then((response) => {
-        setMovies(response.data.results);
-        setLoading(false); // Set loading to false when data is available
+        setMovies(response.data.Search);
+        setLoading(false);
       })
       .catch((error) => {
-        console.error('Error fetching movie data from TMDb:', error);
-        setLoading(false); // Set loading to false in case of an error
+        console.error('Error fetching movie data from OMDB:', error);
+        setLoading(false);
       });
   }, []);
 
@@ -30,12 +30,12 @@ const App = () => {
         {loading ? (
           <p>Loading...</p>
         ) : (
-          movies.map((movie, index) => (
+          movies.map((movie) => (
             <MovieCard
-              key={index}
-              title={movie.title}
-              imageUrl={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-              description={movie.overview}
+              key={movie.imdbID}
+              title={movie.Title}
+              imageUrl={movie.Poster}
+              description={movie.Year}
             />
           ))
         )}
