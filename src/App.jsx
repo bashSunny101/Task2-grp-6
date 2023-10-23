@@ -1,35 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState, useEffect } from 'react';
+import NavBar from './components/NavBar';
+// import MovieCard from './components/MovieCard';
+import axios from 'axios';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [movies, setMovies] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const apiKey = 'YOUR_TMDB_API_KEY';
+    const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`;
+
+    axios
+      .get(apiUrl)
+      .then((response) => {
+        setMovies(response.data.results);
+        setLoading(false); // Set loading to false when data is available
+      })
+      .catch((error) => {
+        console.error('Error fetching movie data from TMDb:', error);
+        setLoading(false); // Set loading to false in case of an error
+      });
+  }, []);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div>
+      <NavBar />
+      <div className="container mx-auto mt-8 flex flex-wrap justify-center">
+        {loading ? (
+          <p>Loading...</p>
+        ) : (
+          movies.map((movie, index) => (
+            <MovieCard
+              key={index}
+              title={movie.title}
+              imageUrl={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+              description={movie.overview}
+            />
+          ))
+        )}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default App
+export default App;
