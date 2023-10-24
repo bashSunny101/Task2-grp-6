@@ -23,7 +23,7 @@ const App = () => {
 
   useEffect(() => {
     const apiKey = 'd59f0303'; 
-    const apiUrl = `http://www.omdbapi.com/?s=movie&type=movie&apikey=${apiKey}`;
+    const apiUrl = `https://www.omdbapi.com/?s=movie&type=movie&apikey=${apiKey}`;
 
     axios
       .get(apiUrl)
