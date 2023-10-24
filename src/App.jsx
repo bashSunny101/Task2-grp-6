@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import NavBar from './components/NavBar';
 import MovieCard from './components/MovieCard';
 import axios from 'axios';
+import NavStyle from './components/Navbar.jsx';
 
 const App = () => {
   const [movies, setMovies] = useState([]);
@@ -25,7 +25,7 @@ const App = () => {
 
   return (
     <div>
-      <NavBar />
+      <NavStyle/>
       <div className="container mx-auto mt-8 flex flex-wrap justify-center">
         {loading ? (
           <p>Loading...</p>
