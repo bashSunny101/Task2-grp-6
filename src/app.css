@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Playpen+Sans:wght@300&display=swap');
 
+
 .heading{
     font-family: 'Playpen Sans', cursive;
     margin: 20px 20px 20px 40px;
@@ -12,14 +13,27 @@ hr{
 }
 
 .container{
+    display: flex;
+}
+
+.box{
     display:flex;
      justify-content: flex-start ;
      overflow: hidden;
      width: 100%;
      transition: transform 0.3 ease-in-out;
      margin-top: 20px ;
+     margin: 10px;
 }
 
-.container:last-child{
+.box:last-child{
+    margin-right: 0;
+}
+
+.scroll-left{
+    cursor: pointer;
+}
+.scroll-right{
+    cursor: pointer;
     margin-right: 0;
 }

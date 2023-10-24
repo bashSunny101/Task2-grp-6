@@ -4,7 +4,19 @@ import axios from 'axios';
 import NavStyle from './components/Navbar.jsx';
 import './app.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faCircleChevronLeft ,faCircleChevronRight } from '@fortawesome/free-solid-svg-icons';
 
+function scrollLeft(id) {
+  const c = document.querySelector(".box");
+  const scrollAmount = -c.firstChild.clientWidth; // Scroll one container width to the left
+  c.style.transform = `translateX(${scrollAmount}px)`;
+}
+
+function scrollRight(id) {
+  const c = document.querySelector(".box");
+  const scrollAmount = c.lastChild.clientWidth; // Scroll one container width to the right
+  c.style.transform = `translateX(${scrollAmount}px)`;
+}
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -25,38 +37,19 @@ const App = () => {
       });
   }, []);
 
+  
   return (
     <div>
       <NavStyle/>
       <div className="heading">
         <p id="heading">Popular Movies</p>
         <hr/>
+      </div>
         <div className="container">
        
-        {loading ? (
-          <p>Loading...</p>
-        ) : (
-          movies.map((movie) => (
-            <MovieCard
-              key={movie.imdbID}
-              title={movie.Title}
-              imageUrl={movie.Poster}
-              description={movie.Year}
-            />
-          ))
-        )}
-      </div>
-
-      <div className="scroll-buttons">
-        <button id="scroll-left"> <FontAwesomeIcon icon="fa-solid fa-circle-chevron-left" size="2xl" /></button>
-        <button id="scroll-right"> <FontAwesomeIcon icon="fa-solid fa-circle-chevron-right" size="2xl" /></button>
-      </div>
-      
-      <div className="heading">
-        <p id="heading">Upcoming Movies</p>
-        <hr/>
-        <div className="container">
-       
+        <button id="scroll-left" onClick={scrollLeft}> <FontAwesomeIcon icon={faCircleChevronLeft} /></button>
+        
+        <div className="box">
         {loading ? (
           <p>Loading...</p>
         ) : (
@@ -70,10 +63,34 @@ const App = () => {
           ))
         )}
         </div>
-      </div>
-    </div>
 
-    </div>
+        <button id="scroll-right" onClick={scrollRight}> <FontAwesomeIcon icon={faCircleChevronRight} /></button>
+      </div>
+      
+      <div className="heading">
+        <p id="heading">Upcoming Movies</p>
+        <hr/>
+      </div>
+        <div className="container">
+        <button id="scroll-left" onClick={scrollLeft}> <FontAwesomeIcon icon={faCircleChevronLeft} /></button>
+        
+        <div className="box">
+        {loading ? (
+          <p>Loading...</p>
+        ) : (
+          movies.map((movie) => (
+            <MovieCard
+              key={movie.imdbID}
+              title={movie.Title}
+              imageUrl={movie.Poster}
+              description={movie.Year}
+            />
+          ))
+        )}
+        </div>
+        <button id="scroll-right" onClick={scrollRight}> <FontAwesomeIcon icon={faCircleChevronRight} /></button>
+        </div>
+      </div>
   );
 };
 
