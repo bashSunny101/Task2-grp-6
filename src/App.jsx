@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import MovieCard from './components/MovieCard';
 import axios from 'axios';
-import NavStyle from './components/Navbar.jsx';
+import NavStyle from './components/NavBar';
 import './app.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCircleChevronLeft ,faCircleChevronRight } from '@fortawesome/free-solid-svg-icons';
