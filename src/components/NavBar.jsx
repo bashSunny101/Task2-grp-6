@@ -7,8 +7,8 @@ import {faHouse , faSearch} from '@fortawesome/free-solid-svg-icons';
 function Nav(){
     return(
         <>
-          <div className='h-100 w-full flex flex-wrap outline-none'>
-          <div className='font-cursive flex flex-wrap gap-x-10 p-6 px-10 justify-around w-full'>
+          <div className='h-100 w-full flex flex-wrap outline-none bg-black pb-5'>
+          <div className='font-cursive flex flex-wrap gap-x-10 p-6 px-10 justify-around w-full font-semibold'>
           <a href="#" className='hover:text-sky-700 '><FontAwesomeIcon icon={faHouse} /></a>
           <a href="#" className='hover:text-sky-700 '>Movies</a>
           <a href="#" className='hover:text-sky-700 '>Bookmarks</a>
