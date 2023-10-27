@@ -11,32 +11,7 @@ body{
     color: #fff;
 }
 
-.navbar{
-    height: 100px;
-    background-color: #000;
-    text-align: center;
-}
-.nav-opt{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-a{
-    margin: 10px;
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-}
-
-.logo{
-    background-image: url("./logo.png");
-    height: 50px;
-    width: 14rem;
-    background-size: contain;
-    margin-left: 42%;
-    margin-top: 5px;
-}
 
 .top-ratedImg{
     height: 350px ;
@@ -57,12 +32,12 @@ a{
     text-align: center;
 }
 
-#search{
+#search-opt{
     text-align: center;
     color: #000;
 }
 
-input{
+#search-opt input{
     width: 80% ;
     height: 43px;
     border-radius: 15px;
