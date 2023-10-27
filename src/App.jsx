@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Card from './components/MovieCard';
-import Nav from './components/Navbar.jsx';
+import Nav from './components/NavBar.jsx';
 import './app.css';
 import Footer from './components/footer';
 
 const App = () => {
   return (
+    
     <div>
       <Nav />
       <div className="heading">
