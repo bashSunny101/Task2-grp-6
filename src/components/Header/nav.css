@@ -32,32 +32,8 @@ body{
     text-align: center;
 }
 
-#search-opt{
-    text-align: center;
-    color: #000;
-}
-
-#search-opt input{
-    width: 80% ;
-    height: 43px;
-    border-radius: 15px;
-    border: 2px solid #fff;
-    padding: 10px;
-}
-
-#search-button{
-    border: 2px solid #fff;
-    border-radius: 15px;
-    padding: 9px;
-    background-color: #212121;
-    color: #fff;
-}
 
 @media screen and (max-width : 800px) {
-    #search-opt input{
-        width: 60%;
-    }
-
     #top{
         padding-top: 10px;
     }

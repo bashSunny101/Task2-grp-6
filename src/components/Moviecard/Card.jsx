@@ -4,7 +4,7 @@ import './movie.css'
 
 
 const apiKey = "dfccb9b3ae7dbbd11879b0f571cfe1ea" ;
-const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&page=1&with_genres=28` ;
+const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&page=1&with_genres=53` ;
 
 function Card(){
     const [movies, setMovies] = useState([]);
