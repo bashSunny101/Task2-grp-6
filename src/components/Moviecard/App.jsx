@@ -1,28 +1,31 @@
 import React, { useState, useEffect } from 'react';
-import Card from './components/MovieCard';
-import Nav from './components/Navbar.jsx';
+import Card from './Card';
 import './app.css';
-import Footer from './components/footer';
+import HeroImg from '../Header/heroImg';
 
 
 const App = () => {
   
   return (
     <div>
-      <Nav/>
+        <HeroImg/>
       <div className="heading">
-        <p id="heading">Popular Movies</p>
+        <p id="heading">NOW PLAYING</p>
         <hr/>
       </div>
             <Card/>
       
       <div className="heading">
-        <p id="heading">Upcoming Movies</p>
+        <p id="heading">TOP RATED</p>
         <hr/>
       </div>
             <Card/>
 
-            <Footer/>
+       <div className="heading">
+        <p id="heading">UPCOMING ..</p>
+        <hr/>
+      </div>
+            <Card/>
       </div>
 
 
